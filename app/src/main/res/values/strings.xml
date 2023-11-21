@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="instruction">Tap a Button to Change Count</string>
-    <string name="count">Count:   </string>
-    <string name="increment">Increment</string>     
-    <string name="decrement">Decrement</string>        
     <string name="app_name">Health Diary</string>
-    <string name="exit">Exit</string>
+
+    <string name="home_welcome">Welcome to Health Diary!</string>
+    <string name="home_message">Please use the following buttons to add new health diary entries.</string>
+
+    <string name="add_medication">Add Medication</string>
+    <string name="add_food">Add Food</string>
+    <string name="add_exercise">Add Exercise</string>
+
+    <string name="app_title">Health Diary</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 </resources>
