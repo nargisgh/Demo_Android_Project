@@ -12,4 +12,8 @@
     <string name="app_title">Health Diary</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="create_account">Create Account</string>
+    <string name="daily_diary">Daily Diary</string>
+    <string name="wellness_goals">Wellness Goals\n</string>
+    <string name="my_account">My Account</string>
 </resources>

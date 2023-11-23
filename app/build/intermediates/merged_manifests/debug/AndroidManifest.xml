@@ -19,6 +19,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+
+        <!-- Main Activity -->
         <activity android:name="ca.yorku.eecs.mack.healthappdemo.HealthAppDemo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
