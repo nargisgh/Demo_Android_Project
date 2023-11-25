@@ -8,4 +8,13 @@
     <string name="decrement">Decrement</string>        
     <string name="app_name">Health Diary</string>
     <string name="exit">Exit</string>
+    <string name="create_wellness_goals">Create Wellness Goals</string>
+    <string name="wellness_activity_label" />
+
+
+    <item name="goalsLayout" type="id" />
+    <item name="buttonAddGoal" type="id" />
+    <item name="buttonSaveGoals" type="id" />
+    <item name="textViewHeader" type="id" />
 </resources>
+

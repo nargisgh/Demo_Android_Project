@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorAccent">#FF4081</color>
     <color name="ic_launcher_background">#26A69A</color>
+    <item name="buttonAddGoal" type="id"/>
+    <item name="buttonSaveGoals" type="id"/>
+    <item name="goalsLayout" type="id"/>
+    <item name="textViewHeader" type="id"/>
     <string name="app_name">Health Diary</string>
     <string name="count">Count:   </string>
+    <string name="create_wellness_goals">Create Wellness Goals</string>
+    <string name="daily_diary_title">Daily Log</string>
     <string name="decrement">Decrement</string>
     <string name="exit">Exit</string>
     <string name="increment">Increment</string>
     <string name="instruction">Tap a Button to Change Count</string>
+    <string name="trial">Trial:</string>
+    <string name="wellness_activity_label"/>
 </resources>

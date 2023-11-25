@@ -4,37 +4,50 @@
             "outputFile": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "6,3,5,7,4,2",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "283,127,226,334,172,57",
-                        "endColumns": "49,43,47,37,47,68",
-                        "endOffsets": "328,166,269,367,215,121"
-                    },
-                    "to": {
-                        "startLines": "3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "112,162,206,254,292,340",
-                        "endColumns": "49,43,47,37,47,68",
-                        "endOffsets": "157,201,249,287,335,404"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "15,16,14,17,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "4,4,4,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "639,684,596,731,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endColumns": "43,45,41,44,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endOffsets": "678,725,633,771,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "158,201,246,287,331,381,425,497,553,601,639,687,756,797",
+                        "endColumns": "42,44,40,43,49,43,71,55,47,37,47,68,40,44",
+                        "endOffsets": "196,241,282,326,376,420,492,548,596,634,682,751,792,837"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tarun\\Github\\Demo_Android_Project\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "101",
                         "endColumns": "56",
-                        "endOffsets": "107"
+                        "endOffsets": "153"
                     }
                 }
             ]

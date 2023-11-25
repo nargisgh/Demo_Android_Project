@@ -1,0 +1,6 @@
+<!-- colors.xml -->
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <!-- You can choose any color value for your accent color -->
+    <!-- Make sure it's a valid color representation (e.g., #RRGGBB or #AARRGGBB) -->
+</resources>
