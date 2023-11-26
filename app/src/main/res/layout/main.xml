@@ -110,6 +110,7 @@
                         android:layout_height="98dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
+                        android:onClick="onCreateAccountClick"
                         android:background="@drawable/button_background"
                         android:contentDescription="@string/create_account"
                         android:scaleType="fitCenter"

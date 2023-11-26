@@ -91,6 +91,8 @@
     <string name="mindset">Mindset</string>
     <string name="overall_mood">Overall Mood</string>
     <string name="average_time">Average Time</string>
+    <string name="fields_cant_be_empty">Fields Cannot be empty.</string>
+    <string name="account_created_successfully">Account Created Successfully</string>
 
 
     <item name="goalsLayout" type="id" />

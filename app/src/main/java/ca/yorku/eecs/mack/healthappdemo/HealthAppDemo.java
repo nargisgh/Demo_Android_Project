@@ -1,5 +1,7 @@
 package ca.yorku.eecs.mack.healthappdemo;// MainActivity.java
 
+import static ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity.USER;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -31,10 +33,12 @@ public class HealthAppDemo extends AppCompatActivity {
         TextView todayDateTextView = findViewById(R.id.todayDateTextView);
         String goal = getGoals();
         TextView goals = findViewById(R.id.textView4);
-        goals.setText("Today's Goal..."+goal);
+        goals.setText("Today's Goal:-"+"\n"+goal);
         // Get today's date
         String todayDate = getCurrentDate();
-
+        String user = getUsername();
+        TextView usern = findViewById(R.id.textView3);
+        usern.setText(user);
         // Set the text of todayDateTextView to display today's date
         todayDateTextView.setText(todayDate);
 
@@ -76,9 +80,19 @@ public class HealthAppDemo extends AppCompatActivity {
         Intent intent = new Intent(this, WellnessGoalsActivity.class);
         startActivity(intent);
     }
+    public void onCreateAccountClick(View view){
+        toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
+        Intent intent = new Intent(this, CreateAccountActivity.class);
+        startActivity(intent);
+    }
     private String getGoals(){
         SharedPreferences prefs = getSharedPreferences(WellnessGoalsActivity.GOAL, Context.MODE_PRIVATE);
         return prefs.getString("newgoal", ""); // the default value
+    }
+
+    private String getUsername(){
+        SharedPreferences prefs = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        return prefs.getString("username", "Everyone!"); // the default value
     }
 
     @Override
@@ -86,6 +100,9 @@ public class HealthAppDemo extends AppCompatActivity {
         super.onResume();
         String goal = getGoals();
         TextView goals = findViewById(R.id.textView4);
-        goals.setText("\nToday's Goal...\n"+goal);
+        goals.setText("\nToday's Goal:-"+"\n"+goal);
+        String user = getUsername();
+        TextView usern = findViewById(R.id.textView3);
+        usern.setText(user);
     }
 }

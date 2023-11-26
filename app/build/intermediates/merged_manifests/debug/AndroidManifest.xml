@@ -8,6 +8,7 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="29" />
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- NOTE: minSdkVersion and targetSdkVersion specified in build.gradle -->
     <application
         android:allowBackup="true"
@@ -72,6 +73,14 @@
             </intent-filter>
         </activity>
         <activity android:name="ca.yorku.eecs.mack.healthappdemo.DailyDiary_Spinner" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
