@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +24,7 @@ public class WellnessGoalsActivity extends Activity {
 
     private static final String PREF_NAME = "WellnessGoalsPref";
     private static final String GOALS_KEY = "Goals";
+    public static final String GOAL = "newgoal";
 
     private LinearLayout goalsLayout;
     private Button buttonAddGoal;
@@ -81,6 +81,7 @@ public class WellnessGoalsActivity extends Activity {
         buttonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveGoal("Today's Goal");
                 resetGoals();
             }
         });
@@ -200,6 +201,7 @@ public class WellnessGoalsActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 String newGoal = input.getText().toString().trim();
                 if (!newGoal.isEmpty()) {
+                    saveGoal(newGoal);
                     addGoal(newGoal);
 
                     // Show the "Save Goals" button after a goal is inputted
@@ -229,7 +231,6 @@ public class WellnessGoalsActivity extends Activity {
         goalTextView.setTextColor(Color.WHITE);
         goalTextView.setTypeface(null, Typeface.BOLD);
         goalTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-
         // Add a click listener for editing/deleting the goal
         goalTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -262,19 +263,8 @@ public class WellnessGoalsActivity extends Activity {
         if (goalsLayout.getChildCount() == 1) {
             buttonSaveGoals.setVisibility(View.GONE); // Hide the "Save Goals" button
         }
-        updateTodayGoalsTextView();
     }
 
-    private void updateTodayGoalsTextView() {
-        // Find the TextView with the id textView4
-        TextView todayGoalsTextView = findViewById(R.id.textView4);
-
-        // Check if the TextView exists
-        if (todayGoalsTextView != null) {
-            // Update the text of the TextView with the goals header
-            todayGoalsTextView.setText("Today's Goals:");
-        }
-    }
 
     private void showEditOptions(final TextView goalTextView) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -338,7 +328,6 @@ public class WellnessGoalsActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 // Remove the goal from the layout
                 goalsLayout.removeView(goalTextView);
-
                 // If there are no more goals, show the central "+" button
                 if (goalsLayout.getChildCount() == 0) {
                     buttonAddGoal.setVisibility(View.VISIBLE);
@@ -409,5 +398,10 @@ public class WellnessGoalsActivity extends Activity {
     private int dpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return Math.round((float) dp * density);
+    }
+    private void saveGoal(String goal){
+        SharedPreferences.Editor editor = getSharedPreferences(GOAL, Context.MODE_PRIVATE).edit();
+        editor.putString("newgoal", goal);
+        editor.apply();
     }
 }

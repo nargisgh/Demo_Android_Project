@@ -873,6 +873,123 @@
                         android:text="__ clicks"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
                 </TableRow>
+            </TableLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:background="#35BF1A"
+                android:text="@string/average_time"
+                android:textSize="18sp" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="248dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="left"
+                    android:paddingRight="5dp"
+                    android:background="#677AE6"
+                    android:text="@string/input_type"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:layout_width="154dp"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:background="#677AE6"
+                    android:text="@string/radio_button"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="left"
+                    android:paddingRight="5dp"
+                    android:text="@string/time"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/averageTimeR"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="__seconds"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="left"
+                    android:paddingRight="5dp"
+                    android:background="#677AE6"
+                    android:text="@string/input_type"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:layout_width="154dp"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:background="#677AE6"
+                    android:text="@string/slider"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:paddingRight="5dp"
+                        android:text="@string/time"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/avgTimeS"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="__seconds"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:paddingRight="5dp"
+                        android:background="#677AE6"
+                        android:text="@string/input_type"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="154dp"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:background="#677AE6"
+                        android:text="@string/spinner_list"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:paddingRight="5dp"
+                        android:text="@string/time"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/averageTimeSP"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="__seconds"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
 
             </TableLayout>
 

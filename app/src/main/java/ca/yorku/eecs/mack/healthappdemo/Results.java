@@ -9,11 +9,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class Results extends Activity {
     private TextView timeRB_1, timeRB_2, timeRB_3, timeRB_4, timeRB_5, timeS_1,timeS_2, timeS_3, timeS_4, timeS_5,
             timeSP_1, timeSP_2, timeSP_3, timeSP_4, timeSP_5;
     private TextView clickRB_1, clickRB_2, clickRB_3, clickRB_4, clickRB_5, clickS_1,clickS_2,clickS_3,clickS_4,clickS_5,
-            clickSP_1,clickSP_2,clickSP_3,clickSP_4,clickSP_5;
+            clickSP_1,clickSP_2,clickSP_3,clickSP_4,clickSP_5, avgR, avgS, avgSP;
+    String avgTR, avgTS, avgTSP;
+    private DecimalFormat df = new DecimalFormat("#.##");
 
     private static final String PREFS_NAME = "RadioButton";
     private static final String PREFS_NAME2 = "Slider";
@@ -27,6 +31,9 @@ public class Results extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         initialize();
         setResults();
+        avgR.setText(avgTR + "seconds");
+        avgS.setText(avgTS+ "seconds");
+        avgSP.setText(avgTSP+ "seconds");
     }
 
     private void setResults() {
@@ -41,6 +48,9 @@ public class Results extends Activity {
         int click4r = prefs.getInt(CLICK_COUNT_KEY+4, 0);
         String timer5r = prefs.getString(TIME_KEY+5,"s");
         int click5r = prefs.getInt(CLICK_COUNT_KEY+5, 0);
+        double temp = ((Double.parseDouble(timer1r) + Double.parseDouble(timer2r) + Double.parseDouble(timer3r)
+                + Double.parseDouble(timer4r) + Double.parseDouble(timer5r))/5.00);
+        avgTR = df.format(temp);
 
         SharedPreferences prefs2 = getSharedPreferences(PREFS_NAME2, Context.MODE_PRIVATE);
         String timer1s = prefs2.getString(TIME_KEY+1,"s");
@@ -53,6 +63,9 @@ public class Results extends Activity {
         int click4s = prefs2.getInt(CLICK_COUNT_KEY+4, 0);
         String timer5s = prefs2.getString(TIME_KEY+5,"s");
         int click5s = prefs2.getInt(CLICK_COUNT_KEY+5, 0);
+        temp = ((Double.parseDouble(timer1s) + Double.parseDouble(timer2s) + Double.parseDouble(timer3s)
+                + Double.parseDouble(timer4s) + Double.parseDouble(timer5s))/5.00);
+        avgTS = df.format(temp);
 
         SharedPreferences prefs3 = getSharedPreferences(PREFS3, Context.MODE_PRIVATE);
         String timer1sp = prefs3.getString(TIME_KEY+1,"s");
@@ -65,6 +78,10 @@ public class Results extends Activity {
         int click4sp = prefs3.getInt(CLICK_COUNT_KEY+4, 0);
         String timer5sp = prefs3.getString(TIME_KEY+5,"s");
         int click5sp = prefs3.getInt(CLICK_COUNT_KEY+5, 0);
+
+        temp = ((Double.parseDouble(timer1sp) + Double.parseDouble(timer2sp) + Double.parseDouble(timer3sp)
+                + Double.parseDouble(timer4sp) + Double.parseDouble(timer5sp))/5.00);
+        avgTSP = df.format(temp);
 
         timeRB_1.setText(""+timer1r+" seconds");
         clickRB_1.setText(""+click1r);
@@ -135,9 +152,25 @@ public class Results extends Activity {
         clickSP_3 = findViewById(R.id.clicksp3);
         clickSP_4 = findViewById(R.id.clicksp4);
         clickSP_5 = findViewById(R.id.clicksp5);
+
+        avgR = findViewById(R.id.averageTimeR);
+        avgS = findViewById(R.id.avgTimeS);
+        avgSP = findViewById(R.id.averageTimeSP);
     }
 
     public void onHomeButtonClick(View view){
+        SharedPreferences preferences = getSharedPreferences(PREFS3, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+        preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+        preferences = getSharedPreferences(PREFS_NAME2, Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        editor.clear();
+        editor.apply();
         Intent intent;
         intent = new Intent(this, HealthAppDemo.class);
         startActivity(intent);

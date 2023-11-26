@@ -1,6 +1,8 @@
 package ca.yorku.eecs.mack.healthappdemo;// MainActivity.java
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
@@ -27,7 +29,9 @@ public class HealthAppDemo extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // Get the TextView reference
         TextView todayDateTextView = findViewById(R.id.todayDateTextView);
-
+        String goal = getGoals();
+        TextView goals = findViewById(R.id.textView4);
+        goals.setText(goal);
         // Get today's date
         String todayDate = getCurrentDate();
 
@@ -68,13 +72,20 @@ public class HealthAppDemo extends AppCompatActivity {
     }
 
     public void onWellnessGoalsClick(View view){
-        /*SharedPreferences prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        int counter = prefs.getInt("counter", 1);
-        if (counter > 5){
-            //show normal questionnaire, no more trials
-        }*/
         toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
         Intent intent = new Intent(this, WellnessGoalsActivity.class);
         startActivity(intent);
+    }
+    private String getGoals(){
+        SharedPreferences prefs = getSharedPreferences(WellnessGoalsActivity.GOAL, Context.MODE_PRIVATE);
+        return prefs.getString("newgoal", "Today's Goal"); // the default value
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String goal = getGoals();
+        TextView goals = findViewById(R.id.textView4);
+        goals.setText(goal);
     }
 }
