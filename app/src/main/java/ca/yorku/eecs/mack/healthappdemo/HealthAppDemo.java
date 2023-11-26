@@ -31,7 +31,7 @@ public class HealthAppDemo extends AppCompatActivity {
         TextView todayDateTextView = findViewById(R.id.todayDateTextView);
         String goal = getGoals();
         TextView goals = findViewById(R.id.textView4);
-        goals.setText(goal);
+        goals.setText("Today's Goal..."+goal);
         // Get today's date
         String todayDate = getCurrentDate();
 
@@ -78,7 +78,7 @@ public class HealthAppDemo extends AppCompatActivity {
     }
     private String getGoals(){
         SharedPreferences prefs = getSharedPreferences(WellnessGoalsActivity.GOAL, Context.MODE_PRIVATE);
-        return prefs.getString("newgoal", "Today's Goal"); // the default value
+        return prefs.getString("newgoal", ""); // the default value
     }
 
     @Override
@@ -86,6 +86,6 @@ public class HealthAppDemo extends AppCompatActivity {
         super.onResume();
         String goal = getGoals();
         TextView goals = findViewById(R.id.textView4);
-        goals.setText(goal);
+        goals.setText("\nToday's Goal...\n"+goal);
     }
 }

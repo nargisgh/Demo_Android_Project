@@ -46,12 +46,7 @@ public class WellnessGoalsActivity extends Activity {
         batteryStatusTextView = findViewById(R.id.batteryStatusTextView);
 
         TextView textViewHeader = findViewById(R.id.textViewHeader);
-        textViewHeader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startCreatingGoal();
-            }
-        });
+        textViewHeader.setOnClickListener(view -> startCreatingGoal());
 
         // Check if goals are already created, and update button visibility accordingly
         if (goalsLayout.getChildCount() == 0) {
@@ -64,26 +59,13 @@ public class WellnessGoalsActivity extends Activity {
 
         loadSavedGoals();
 
-        buttonAddGoal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startCreatingGoal();
-            }
-        });
+        buttonAddGoal.setOnClickListener(view -> startCreatingGoal());
 
-        buttonSaveGoals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveGoals();
-            }
-        });
+        buttonSaveGoals.setOnClickListener(view -> saveGoals());
 
-        buttonReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveGoal("Today's Goal");
-                resetGoals();
-            }
+        buttonReset.setOnClickListener(v -> {
+            saveGoal(" ");
+            resetGoals();
         });
 
         // Register a BroadcastReceiver to listen for battery changes
@@ -196,27 +178,19 @@ public class WellnessGoalsActivity extends Activity {
         builder.setView(input);
 
         // Set up the buttons
-        builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String newGoal = input.getText().toString().trim();
-                if (!newGoal.isEmpty()) {
-                    saveGoal(newGoal);
-                    addGoal(newGoal);
+        builder.setPositiveButton("Save", (dialog, which) -> {
+            String newGoal = input.getText().toString().trim();
+            if (!newGoal.isEmpty()) {
+                saveGoal(newGoal);
+                addGoal(newGoal);
 
-                    // Show the "Save Goals" button after a goal is inputted
-                    buttonSaveGoals.setVisibility(View.VISIBLE);
-                } else {
-                    Toast.makeText(WellnessGoalsActivity.this, "Goal cannot be empty", Toast.LENGTH_SHORT).show();
-                }
+                // Show the "Save Goals" button after a goal is inputted
+                buttonSaveGoals.setVisibility(View.VISIBLE);
+            } else {
+                Toast.makeText(WellnessGoalsActivity.this, "Goal cannot be empty", Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
@@ -232,12 +206,7 @@ public class WellnessGoalsActivity extends Activity {
         goalTextView.setTypeface(null, Typeface.BOLD);
         goalTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
         // Add a click listener for editing/deleting the goal
-        goalTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showEditOptions(goalTextView);
-            }
-        });
+        goalTextView.setOnClickListener(view -> showEditOptions(goalTextView));
 
         // Add spacing between goals
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -270,17 +239,14 @@ public class WellnessGoalsActivity extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Goal Options");
 
-        builder.setItems(new CharSequence[]{"Edit", "Delete"}, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0:
-                        editGoal(goalTextView);
-                        break;
-                    case 1:
-                        deleteGoal(goalTextView);
-                        break;
-                }
+        builder.setItems(new CharSequence[]{"Edit", "Delete"}, (dialog, which) -> {
+            switch (which) {
+                case 0:
+                    editGoal(goalTextView);
+                    break;
+                case 1:
+                    deleteGoal(goalTextView);
+                    break;
             }
         });
 
@@ -296,23 +262,15 @@ public class WellnessGoalsActivity extends Activity {
 
         builder.setView(input);
 
-        builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String editedGoal = input.getText().toString().trim();
-                if (!editedGoal.isEmpty()) {
-                    goalTextView.setText(editedGoal);
-                } else {
-                    Toast.makeText(WellnessGoalsActivity.this, "Goal cannot be empty", Toast.LENGTH_SHORT).show();
-                }
+        builder.setPositiveButton("Save", (dialog, which) -> {
+            String editedGoal = input.getText().toString().trim();
+            if (!editedGoal.isEmpty()) {
+                goalTextView.setText(editedGoal);
+            } else {
+                Toast.makeText(WellnessGoalsActivity.this, "Goal cannot be empty", Toast.LENGTH_SHORT).show();
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
@@ -323,31 +281,23 @@ public class WellnessGoalsActivity extends Activity {
 
         builder.setMessage("Are you sure you want to delete this goal?");
 
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Remove the goal from the layout
-                goalsLayout.removeView(goalTextView);
-                // If there are no more goals, show the central "+" button
-                if (goalsLayout.getChildCount() == 0) {
-                    buttonAddGoal.setVisibility(View.VISIBLE);
+        builder.setPositiveButton("Yes", (dialog, which) -> {
+            // Remove the goal from the layout
+            goalsLayout.removeView(goalTextView);
+            // If there are no more goals, show the central "+" button
+            if (goalsLayout.getChildCount() == 0) {
+                buttonAddGoal.setVisibility(View.VISIBLE);
 
-                    // Reset the header if there are no more goals
-                    TextView textViewHeader = findViewById(R.id.textViewHeader);
-                    textViewHeader.setText("Create Wellness Goals");
-                    isFirstGoalCreated = false;
+                // Reset the header if there are no more goals
+                TextView textViewHeader = findViewById(R.id.textViewHeader);
+                textViewHeader.setText("Create Wellness Goals");
+                isFirstGoalCreated = false;
 
-                    // Hide the "Save Goals" button
-                    buttonSaveGoals.setVisibility(View.GONE);
-                }
+                // Hide the "Save Goals" button
+                buttonSaveGoals.setVisibility(View.GONE);
             }
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
+        builder.setNegativeButton("No", (dialog, which) -> dialog.cancel());
 
         builder.show();
     }
@@ -362,12 +312,7 @@ public class WellnessGoalsActivity extends Activity {
 
         builder.setView(message);
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
 
         AlertDialog dialog = builder.create();
         dialog.show();
