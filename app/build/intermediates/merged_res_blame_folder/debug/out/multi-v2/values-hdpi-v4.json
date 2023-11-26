@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "ca.yorku.eecs.mack.healthappdemo.app-mergeDebugResources-18:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\tarun\\.gradle\\caches\\transforms-3\\99d41f3e8556fca9bd72f9db8999c345\\transformed\\appcompat-1.2.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
