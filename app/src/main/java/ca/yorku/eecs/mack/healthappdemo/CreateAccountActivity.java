@@ -22,18 +22,22 @@ public class CreateAccountActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonCreateAccount = findViewById(R.id.buttonCreateAccount);
 
-        buttonCreateAccount.setOnClickListener(view -> OnClick());
+        // Use lambda expression for onClickListener
+        buttonCreateAccount.setOnClickListener(this::onClick);
     }
-    protected void OnClick(){
 
-            String username = editTextUsername.getText().toString();
-            String password = editTextPassword.getText().toString();
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(CreateAccountActivity.this, "Fields can't be empty", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(CreateAccountActivity.this, "Account created successfully", Toast.LENGTH_SHORT).show();
-            }
 
+    // Rename method to follow Java conventions
+    private void onClick(View v) {
+        // Handle button click here
+        String username = editTextUsername.getText().toString();
+        String password = editTextPassword.getText().toString();
+
+        if (username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(CreateAccountActivity.this, R.string.fields_cant_be_empty, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(CreateAccountActivity.this, R.string.account_created_successfully, Toast.LENGTH_SHORT).show();
+        }
     }
 }

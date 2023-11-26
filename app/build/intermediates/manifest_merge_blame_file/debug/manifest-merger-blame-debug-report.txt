@@ -10,7 +10,7 @@
 10
 11    <!-- NOTE: minSdkVersion and targetSdkVersion specified in build.gradle -->
 12    <application
-12-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:9:5-74:19
+12-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:9:5-82:19
 13        android:allowBackup="true"
 13-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:10:9-35
 14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -152,6 +152,23 @@
 79-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:23:27-74
 80            </intent-filter>
 81        </activity>
-82    </application>
-83
-84</manifest>
+82        <activity android:name="ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity" >
+82-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:74:9-81:20
+82-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:75:13-50
+83            <intent-filter>
+83-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:20:13-24:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:21:17-68
+84-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:21:25-66
+85                <action android:name="android.intent.action.VIEW" />
+85-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:22:17-69
+85-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:22:25-66
+86
+87                <category android:name="android.intent.category.LAUNCHER" />
+87-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:23:17-76
+87-->C:\Users\manav31\StudioProjects\Demo_Android_Project\app\src\main\AndroidManifest.xml:23:27-74
+88            </intent-filter>
+89        </activity>
+90    </application>
+91
+92</manifest>

@@ -2568,6 +2568,7 @@ int string abc_searchview_description_voice 0x7f0f0027
 int string abc_shareactionprovider_share_with 0x7f0f0028
 int string abc_shareactionprovider_share_with_application 0x7f0f0029
 int string abc_toolbar_collapse_description 0x7f0f002a
+int string account_created_successfully 0x7f0f00c2
 int string add_exercise 0x7f0f002b
 int string add_food 0x7f0f002c
 int string add_medication 0x7f0f002d
@@ -2606,6 +2607,7 @@ int string exit 0x7f0f004d
 int string exposed_dropdown_menu_content_description 0x7f0f004e
 int string fab_transformation_scrim_behavior 0x7f0f004f
 int string fab_transformation_sheet_behavior 0x7f0f0050
+int string fields_cant_be_empty 0x7f0f00c3
 int string fully_energized 0x7f0f0051
 int string gym_workout 0x7f0f0052
 int string hello 0x7f0f0053
