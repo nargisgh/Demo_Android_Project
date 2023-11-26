@@ -56,7 +56,7 @@
     <string name="_3_meals_a_day">3 Meals a Day</string>
     <string name="inconsistent_eating_habits">Inconsistent Eating Habits</string>
     <string name="results">Results</string>
-    <string name="spinner_list">List View</string>
+    <string name="spinner_list">Spinner</string>
     <string name="clicks">Clicks:</string>
     <string name="time">Time:</string>
     <string name="home">Home</string>
@@ -90,6 +90,7 @@
     <string name="save_goals">Save Goals</string>
     <string name="mindset">Mindset</string>
     <string name="overall_mood">Overall Mood</string>
+    <string name="average_time">Average Time</string>
 
 
     <item name="goalsLayout" type="id" />

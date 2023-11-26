@@ -86,7 +86,7 @@ public class DailyDiary_Slider extends Activity {
         saveData();
         Intent intent;
         Bundle b = new Bundle();
-        intent = new Intent(this, DailyDiary_ListView.class);
+        intent = new Intent(this, DailyDiary_Spinner.class);
         b.putInt("count", count);
         intent.putExtras(b);
         startActivity(intent);
