@@ -1,5 +1,7 @@
 package ca.yorku.eecs.mack.healthappdemo;// MainActivity.java
 
+import static ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity.USER;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -34,7 +36,9 @@ public class HealthAppDemo extends AppCompatActivity {
         goals.setText("Today's Goal:-"+"\n"+goal);
         // Get today's date
         String todayDate = getCurrentDate();
-
+        String user = getUsername();
+        TextView usern = findViewById(R.id.textView3);
+        usern.setText(user);
         // Set the text of todayDateTextView to display today's date
         todayDateTextView.setText(todayDate);
 
@@ -86,11 +90,19 @@ public class HealthAppDemo extends AppCompatActivity {
         return prefs.getString("newgoal", ""); // the default value
     }
 
+    private String getUsername(){
+        SharedPreferences prefs = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        return prefs.getString("username", "Everyone!"); // the default value
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         String goal = getGoals();
         TextView goals = findViewById(R.id.textView4);
         goals.setText("\nToday's Goal:-"+"\n"+goal);
+        String user = getUsername();
+        TextView usern = findViewById(R.id.textView3);
+        usern.setText(user);
     }
 }

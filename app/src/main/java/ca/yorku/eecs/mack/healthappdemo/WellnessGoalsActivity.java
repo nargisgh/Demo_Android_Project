@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class WellnessGoalsActivity extends Activity {
 
@@ -31,14 +34,18 @@ public class WellnessGoalsActivity extends Activity {
     private Button buttonSaveGoals;
     private Button buttonReset;
     private TextView batteryStatusTextView;
-
+    private static final int SPEECH_TO_TEXT_REQUEST_CODE = 1;
     private boolean isFirstGoalCreated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wellness_goals);
-
+        // Create and set up the speech recognition Intent
+        //Intent speechIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        //speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        // Start the speech recognition activity
+        //startActivityForResult(speechIntent, SPEECH_TO_TEXT_REQUEST_CODE);
         goalsLayout = findViewById(R.id.goalsLayout);
         buttonAddGoal = findViewById(R.id.buttonAddGoal);
         buttonSaveGoals = findViewById(R.id.buttonSaveGoals);
@@ -349,4 +356,19 @@ public class WellnessGoalsActivity extends Activity {
         editor.putString("newgoal", goal);
         editor.apply();
     }
+
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == SPEECH_TO_TEXT_REQUEST_CODE && resultCode == RESULT_OK) {
+            ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            // Process the speech-to-text results
+            if (results != null && !results.isEmpty()) {
+                String spokenText = results.get(0);
+                saveGoal(spokenText);
+            }
+        }
+    }*/
 }
