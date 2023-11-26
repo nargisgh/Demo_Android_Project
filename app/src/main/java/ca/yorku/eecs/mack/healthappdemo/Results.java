@@ -31,9 +31,9 @@ public class Results extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         initialize();
         setResults();
-        avgR.setText(avgTR + "seconds");
-        avgS.setText(avgTS+ "seconds");
-        avgSP.setText(avgTSP+ "seconds");
+        avgR.setText(avgTR + " seconds");
+        avgS.setText(avgTS+ " seconds");
+        avgSP.setText(avgTSP+ " seconds");
     }
 
     private void setResults() {
