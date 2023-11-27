@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    tools:context=".MyAccountActivity"
-    android:background="#F8EEEC">
+    android:background="#F8EEEC"
+    tools:context=".MyAccountActivity">
 
     <!-- Application Information CardView -->
     <androidx.cardview.widget.CardView
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Application Information"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_marginBottom="16dp"/>
 
@@ -37,7 +37,7 @@
                 android:id="@+id/textViewVersion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/version"
+                android:text="Version: 1.0"
                 android:layout_below="@+id/textViewAppInfo"
                 android:layout_marginTop="8dp"/>
 
@@ -45,7 +45,7 @@
                 android:id="@+id/textViewDeveloper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/developer"
+                android:text="Developer: Your Company"
                 android:layout_below="@+id/textViewVersion"
                 android:layout_marginTop="8dp"/>
         </RelativeLayout>
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User Information"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_marginBottom="16dp"/>
 
@@ -80,7 +80,7 @@
                 android:id="@+id/textViewUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/username"
+                android:text="Username: JohnDoe"
                 android:layout_below="@+id/textViewUserInfo"
                 android:layout_marginTop="8dp"/>
 
@@ -88,7 +88,7 @@
                 android:id="@+id/textViewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Email"
+                android:text="Email: john.doe@example.com"
                 android:layout_below="@+id/textViewUserName"
                 android:layout_marginTop="8dp"/>
         </RelativeLayout>

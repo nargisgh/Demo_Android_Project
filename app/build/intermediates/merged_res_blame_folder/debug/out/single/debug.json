@@ -144,6 +144,10 @@
         "source": "ca.yorku.eecs.mack.healthappdemo.app-main-22:/layout/results.xml"
     },
     {
+        "merged": "ca.yorku.eecs.mack.healthappdemo.app-merged_res-20:/layout_activity_my_account.xml.flat",
+        "source": "ca.yorku.eecs.mack.healthappdemo.app-main-22:/layout/activity_my_account.xml"
+    },
+    {
         "merged": "ca.yorku.eecs.mack.healthappdemo.app-merged_res-20:/drawable_ic_progress.png.flat",
         "source": "ca.yorku.eecs.mack.healthappdemo.app-main-22:/drawable/ic_progress.png"
     },
