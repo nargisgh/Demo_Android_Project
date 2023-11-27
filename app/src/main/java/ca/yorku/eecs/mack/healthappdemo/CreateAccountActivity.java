@@ -15,6 +15,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     public static final String USER = "user";
     private EditText editTextUsername;
     private EditText editTextPassword;
+    private EditText email;
     private Button buttonCreateAccount;
 
     @Override
@@ -24,6 +25,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
+        email = findViewById(R.id.editTextEmail);
         buttonCreateAccount = findViewById(R.id.buttonCreateAccount);
 
         // Use lambda expression for onClickListener
@@ -40,8 +42,11 @@ public class CreateAccountActivity extends AppCompatActivity {
         editor.putString("username", username);
         editor.apply();
         String password = editTextPassword.getText().toString();
+        String emailInput = email.getText().toString();
+        editor.putString("email", emailInput);
+        editor.apply();
 
-        if (username.isEmpty() || password.isEmpty()) {
+        if (username.isEmpty() || password.isEmpty() || emailInput.isEmpty()) {
             Toast.makeText(CreateAccountActivity.this, R.string.fields_cant_be_empty, Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(CreateAccountActivity.this, R.string.account_created_successfully, Toast.LENGTH_SHORT).show();

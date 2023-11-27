@@ -1,6 +1,9 @@
 // MyAccountActivity.java
 package ca.yorku.eecs.mack.healthappdemo;
 
+import static ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity.USER;
+
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -36,17 +39,23 @@ public class MyAccountActivity extends AppCompatActivity {
 
     private void displayUserInfo() {
         // Retrieve user-specific information from SharedPreferences (replace with your actual data retrieval)
-        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-        String username = prefs.getString("username", "John Doe");
-        String email = prefs.getString("email", "John.Doe@example.com");
 
         // Display user-specific information in TextViews
+        String user = getUsername();
         TextView usernameTextView = findViewById(R.id.textViewUserName);
-        usernameTextView.setText("Username: " + username);
-
+        usernameTextView.setText("Username: " + user);
+        String email = getEmail();
         TextView emailTextView = findViewById(R.id.textViewEmail);
         emailTextView.setText("Email: " + email);
 
         // Add more TextViews for additional user information
+    }
+    private String getUsername(){
+        SharedPreferences prefs = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        return prefs.getString("username", "John Doe"); // the default value
+    }
+    private String getEmail(){
+        SharedPreferences prefs = getSharedPreferences(USER, Context.MODE_PRIVATE);
+        return prefs.getString("email", "john.doe@email.com"); // the default value
     }
 }
