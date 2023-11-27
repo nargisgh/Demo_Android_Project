@@ -13,7 +13,7 @@
 11-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:7:22-68
 12    <!-- NOTE: minSdkVersion and targetSdkVersion specified in build.gradle -->
 13    <application
-13-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:11:5-85:19
+13-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:11:5-93:19
 14        android:allowBackup="true"
 14-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:12:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -172,6 +172,23 @@
 88-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:26:27-74
 89            </intent-filter>
 90        </activity>
-91    </application>
-92
-93</manifest>
+91        <activity android:name="ca.yorku.eecs.mack.healthappdemo.MyAccountActivity" >
+91-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:85:9-92:20
+91-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:86:13-46
+92            <intent-filter>
+92-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:23:13-27:29
+93                <action android:name="android.intent.action.MAIN" />
+93-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:24:17-68
+93-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:24:25-66
+94                <action android:name="android.intent.action.VIEW" />
+94-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:25:17-69
+94-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:25:25-66
+95
+96                <category android:name="android.intent.category.LAUNCHER" />
+96-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:26:17-76
+96-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:26:27-74
+97            </intent-filter>
+98        </activity>
+99    </application>
+100
+101</manifest>

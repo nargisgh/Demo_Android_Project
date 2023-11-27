@@ -74,6 +74,11 @@ public class HealthAppDemo extends AppCompatActivity {
         Intent intent = new Intent(this, DailyDiary_Radio.class);
         startActivity(intent);
     }
+    public void onMyAccountActivity(View view){
+        toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
+        Intent intent = new Intent(this, MyAccountActivity.class);
+        startActivity(intent);
+    }
 
     public void onWellnessGoalsClick(View view){
         toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
