@@ -93,6 +93,10 @@
     <string name="average_time">Average Time</string>
     <string name="fields_cant_be_empty">Fields Cannot be empty.</string>
     <string name="account_created_successfully">Account Created Successfully</string>
+    <string name="Email">Email: john.doe@example.com</string>
+    <string name="username">Username: JohnDoe</string>
+    <string name="version">Version: 1.0</string>
+    <string name="developer">Developer: Group Alpha</string>
 
 
     <item name="goalsLayout" type="id" />
