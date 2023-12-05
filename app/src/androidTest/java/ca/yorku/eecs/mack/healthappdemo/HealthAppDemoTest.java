@@ -42,6 +42,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ *  Espresso Test for UI interactions
+ *  Goes through different activities -
+ *  Creating account
+ *  My account details
+ *  Wellness goals - adding, editing, checking if its populated
+ *  Daily diary radio buttons and sliders to get the idea of going through the flow of trials
+* */
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class HealthAppDemoTest {

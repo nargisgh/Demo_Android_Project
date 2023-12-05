@@ -1,4 +1,4 @@
-package ca.yorku.eecs.mack.healthappdemo;// MainActivity.java
+package ca.yorku.eecs.mack.healthappdemo;
 
 import static ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity.USER;
 
@@ -20,7 +20,10 @@ import java.util.Locale;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+/***
+ * Home screen that showcases buttons to create account, my account details, daily diary, and wellness gaals
+ * Showcases today's date and most recent wellness goal in the home screen too
+ * */
 public class HealthAppDemo extends AppCompatActivity {
     public static final String PREFS = "MyPrefsFile"; // File to store the counter
     private ToneGenerator toneGenerator = new ToneGenerator(AudioManager.STREAM_ALARM, ToneGenerator.MAX_VOLUME);

@@ -13,7 +13,7 @@
 11-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:7:22-68
 12    <!-- NOTE: minSdkVersion and targetSdkVersion specified in build.gradle -->
 13    <application
-13-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:11:5-102:19
+13-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:11:5-93:19
 14        android:allowBackup="true"
 14-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:12:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -137,8 +137,8 @@
 75        </activity>
 76        <activity
 76-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:66:9-74:20
-77            android:name="ca.yorku.eecs.mack.healthappdemo.DailyDiary_ListView"
-77-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:67:13-48
+77            android:name="ca.yorku.eecs.mack.healthappdemo.DailyDiary_Spinner"
+77-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:67:13-47
 78            android:exported="true" >
 78-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:68:13-36
 79            <intent-filter>
@@ -157,8 +157,8 @@
 85        </activity>
 86        <activity
 86-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:75:9-83:20
-87            android:name="ca.yorku.eecs.mack.healthappdemo.DailyDiary_Spinner"
-87-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:76:13-47
+87            android:name="ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity"
+87-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:76:13-50
 88            android:exported="true" >
 88-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:77:13-36
 89            <intent-filter>
@@ -177,8 +177,8 @@
 95        </activity>
 96        <activity
 96-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:84:9-92:20
-97            android:name="ca.yorku.eecs.mack.healthappdemo.CreateAccountActivity"
-97-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:85:13-50
+97            android:name="ca.yorku.eecs.mack.healthappdemo.MyAccountActivity"
+97-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:85:13-46
 98            android:exported="true" >
 98-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:86:13-36
 99            <intent-filter>
@@ -195,26 +195,6 @@
 103-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:27:27-74
 104            </intent-filter>
 105        </activity>
-106        <activity
-106-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:93:9-101:20
-107            android:name="ca.yorku.eecs.mack.healthappdemo.MyAccountActivity"
-107-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:94:13-46
-108            android:exported="true" >
-108-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:95:13-36
-109            <intent-filter>
-109-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:24:13-28:29
-110                <action android:name="android.intent.action.MAIN" />
-110-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:25:17-68
-110-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:25:25-66
-111                <action android:name="android.intent.action.VIEW" />
-111-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:26:17-69
-111-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:26:25-66
-112
-113                <category android:name="android.intent.category.LAUNCHER" />
-113-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:27:17-76
-113-->/Users/nargisghiasi/4443/Demo_Android_Project/app/src/main/AndroidManifest.xml:27:27-74
-114            </intent-filter>
-115        </activity>
-116    </application>
-117
-118</manifest>
+106    </application>
+107
+108</manifest>
