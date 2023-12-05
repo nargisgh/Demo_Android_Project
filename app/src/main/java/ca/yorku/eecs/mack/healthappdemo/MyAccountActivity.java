@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/***
+ * Retrieves data if the user has logged in and showcases the users username and email
+ * Additional info is app details and its version
+ */
 public class MyAccountActivity extends AppCompatActivity {
 
     @Override

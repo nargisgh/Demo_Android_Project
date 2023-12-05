@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/***
+ * Creates a simple username and email to indicate which user is trying the application
+ */
 public class CreateAccountActivity extends AppCompatActivity {
 
     public static final String USER = "user";

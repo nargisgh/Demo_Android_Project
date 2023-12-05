@@ -15,7 +15,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import java.text.DecimalFormat;
 
-
+/***
+ * Daily Diary log/survey
+ * Shown as first view with 5 questions for the user to click answers from radio buttons
+ * Counts the number of clicks and checks the number of trials (5 max, else use can log their input as normal)
+ * Considers the time it took to complete the survey until clicking next button for the next activity
+ */
 public class DailyDiary_Radio extends Activity {
     private TextView dayOfWeek;
     private RadioGroup energy, sleep, stress,exercise, meals;

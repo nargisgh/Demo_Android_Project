@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -12,7 +11,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.BatteryManager;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +19,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
+/***
+ * Set Wellness goals, add new goals, save it, edit the existing goals, and add more.
+ * Can delete a specific goal or also reset the goals page.
+ * The most recently added goals will show on the home screen.
+ */
 public class WellnessGoalsActivity extends Activity {
 
     private static final String PREF_NAME = "WellnessGoalsPref";

@@ -11,6 +11,11 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
+/***
+ * On the 5th trial results of each trial and input method shown
+ * with respect to the number of clicks it took and the time it took to complete.
+ * Includes average stats as well for each input method and goes to home page after.
+ */
 public class Results extends Activity {
     private TextView timeRB_1, timeRB_2, timeRB_3, timeRB_4, timeRB_5, timeS_1,timeS_2, timeS_3, timeS_4, timeS_5,
             timeSP_1, timeSP_2, timeSP_3, timeSP_4, timeSP_5;

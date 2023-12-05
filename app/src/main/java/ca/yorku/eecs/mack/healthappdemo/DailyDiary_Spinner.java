@@ -12,18 +12,22 @@ import android.media.ToneGenerator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
+/***
+ * Daily Diary log/survey
+ * Shown as third view with 5 questions for the user to click answers from spinner
+ * Counts the number of clicks and checks the number of trials (5 max, else use can log their input as normal)
+ * Considers the time it took to complete the survey until clicking next button for the next activity
+ * - if trial is less than 5 or more than 5, next activity launches back to home screen
+ * - if trial is = 5, next activity is the results page
+ */
 public class DailyDiary_Spinner extends Activity {
     private TextView dayOfWeek;
-    private SeekBar water, screenTime, sleep,energy, mindfulness;
-    private Button nextBtn;
     private long startTimeSBtn; // to store the start time
     private double elapsedTime; // to store elapsed time
     private int clickCount = 0;
